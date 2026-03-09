@@ -21,13 +21,6 @@
     "text": "2 Creating a scatter plot in R\n#| echo: true\n#| message: true\n#| warning: true\n\n# Load ggplot2 for plotting\nlibrary(ggplot2)\n\n# Create a simple scatter plot\ndata &lt;- data.frame(x = 1:10, y = (1:10)^2)\n\nggplot(data, aes(x = x, y = y)) +\n  geom_point() +\n  geom_line() +\n  ggtitle(\"Simple Scatter Plot with ggplot2\") +\n  xlab(\"X-axis\") +\n  ylab(\"Y-axis\")\n#| echo: false\n#| message: false\n#| warning: false\n\n# Load ggplot2 for plotting\nlibrary(ggplot2)\n\n# Create a simple scatter plot\ndata &lt;- data.frame(x = 1:10, y = (1:10)^2)\n\nggplot(data, aes(x = x, y = y)) +\n  geom_point() +\n  geom_line() +\n  ggtitle(\"Simple Scatter Plot with ggplot2\") +\n  xlab(\"X-axis\") +\n  ylab(\"Y-axis\")\n\n2.0.0.0.1 Ende"
   },
   {
-    "objectID": "m2_home.html",
-    "href": "m2_home.html",
-    "title": "Psycho in Hagen",
-    "section": "",
-    "text": "&lt;a class=\"a2a_dd\" href=\"https://www.addtoany.com/share\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_bluesky\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_whatsapp\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_copy_link\"&gt;&lt;/a&gt;"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "1 M2 Statistik (SS26)",
@@ -39,14 +32,14 @@
     "href": "computations.html",
     "title": "Quarto Computations",
     "section": "",
-    "text": "This dataset contains a subset of the fuel economy data from the EPA. Specifically, we use the mpg dataset from the ggplot2 package.\nThe visualization below shows a positive, strong, and linear relationship between the city and highway mileage of these cars. Additionally, mileage is higher for cars with fewer cylinders.\n\n\nCode anzeigen\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;a class=\"a2a_dd\" href=\"https://www.addtoany.com/share\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_bluesky\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_whatsapp\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_copy_link\"&gt;&lt;/a&gt;"
+    "text": "This dataset contains a subset of the fuel economy data from the EPA. Specifically, we use the mpg dataset from the ggplot2 package.\nThe visualization below shows a positive, strong, and linear relationship between the city and highway mileage of these cars. Additionally, mileage is higher for cars with fewer cylinders.\n\n\nCode anzeigen\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Psycho in Hagen",
     "section": "",
-    "text": "Anna, Studentin in Hagen\n\n\n\n\n\n&lt;a class=\"a2a_dd\" href=\"https://www.addtoany.com/share\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_bluesky\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_whatsapp\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_copy_link\"&gt;&lt;/a&gt;"
+    "text": "Anna, Studentin in Hagen"
   },
   {
     "objectID": "hello.html",
@@ -74,13 +67,13 @@
     "href": "links.html",
     "title": "Psycho in Hagen",
     "section": "",
-    "text": "https://www.guillaumedehaene.com/posts/2024/03/styling_a_quarto_blog.html#:~:text=I’ve%20seen%20that%2C%20in,I’ve%20added%20one%20anyway.\n\n\n\n\n\n&lt;a class=\"a2a_dd\" href=\"https://www.addtoany.com/share\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_bluesky\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_whatsapp\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_copy_link\"&gt;&lt;/a&gt;"
+    "text": "https://www.guillaumedehaene.com/posts/2024/03/styling_a_quarto_blog.html#:~:text=I’ve%20seen%20that%2C%20in,I’ve%20added%20one%20anyway."
   },
   {
     "objectID": "right-margin.html",
     "href": "right-margin.html",
     "title": "Psycho in Hagen",
     "section": "",
-    "text": "Anna\nHi, I’m a developer based in Munich. I’m interested in Psychology.\n\n\n\n\n\n&lt;a class=\"a2a_dd\" href=\"https://www.addtoany.com/share\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_bluesky\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_whatsapp\"&gt;&lt;/a&gt;\n&lt;a class=\"a2a_button_copy_link\"&gt;&lt;/a&gt;"
+    "text": "Anna\nHi, I’m a developer based in Munich. I’m interested in Psychology."
   }
 ]
