@@ -31,6 +31,8 @@ format:
   html:
     theme: cerulean        
     mainfont: "EB Garamond, Georgia, serif"
+    date: last-modified
+    date-format: "DD.MM.YYYY"
     code-fold: true     
     code-summary: "Code anzeigen"
     title-block-style: default 
