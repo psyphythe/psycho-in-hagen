@@ -1,0 +1,78 @@
+---
+title: "My First Quarto Test"
+author: "naenaenae"
+date: "2026-03-05"
+format: 
+  html:
+    code-fold: true
+jupyter: python3
+---
+# | label: load-packages
+# | include: false
+
+## Creating a line plot in Python
+
+We demonstrate how to create a simple line plot in Python, in the following steps:
+
+- We import the `matplotlib` library
+- We create data, saved in `x` and `y`
+- We create the plot with the `plt.plot` function.
+
+```{python}
+import matplotlib.pyplot as plt
+
+# Data for plotting
+x = [0, 1, 2, 3, 4]
+y = [0, 1, 4, 9, 16]
+
+# Create the plot
+plt.plot(x, y)
+plt.title("Simple Line Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+``` 
+
+#### Weiterer Versuch
+
+## Creating a scatter plot in R
+
+```{r}
+#| echo: true
+#| message: true
+#| warning: true
+
+# Load ggplot2 for plotting
+library(ggplot2)
+
+# Create a simple scatter plot
+data <- data.frame(x = 1:10, y = (1:10)^2)
+
+ggplot(data, aes(x = x, y = y)) +
+  geom_point() +
+  geom_line() +
+  ggtitle("Simple Scatter Plot with ggplot2") +
+  xlab("X-axis") +
+  ylab("Y-axis")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Load ggplot2 for plotting
+library(ggplot2)
+
+# Create a simple scatter plot
+data <- data.frame(x = 1:10, y = (1:10)^2)
+
+ggplot(data, aes(x = x, y = y)) +
+  geom_point() +
+  geom_line() +
+  ggtitle("Simple Scatter Plot with ggplot2") +
+  xlab("X-axis") +
+  ylab("Y-axis")
+```
+
+###### Ende

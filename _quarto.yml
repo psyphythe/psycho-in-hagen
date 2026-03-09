@@ -1,0 +1,41 @@
+project:
+  type: website
+# für github pages lieber docs, für quatropub _site  
+  output-dir: docs 
+
+website:
+  title: "Psycho in Hagen"
+  description: "Sammlung von Vorlesungensmitschriften et al."
+  margin-header: right-margin.md
+    
+  navbar:
+    background: primary
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - text: "M2 Statistik"
+        menu:
+          - href: computations.qmd
+            text: "Computations"
+          - href: hello.qmd
+            text: "Hello"
+#
+  page-footer:
+    left: >-
+      © 2026 Anna
+
+format:
+  html:
+    theme: cosmo        # Ein schlichtes, professionelles Design
+    code-fold: true     # Code-Blöcke sind standardmäßig eingeklappt (spart Platz/Übersicht)
+    code-summary: "Code anzeigen"
+    title-block-style: default # Schaltet den Standard-Block oben aus
+    toc: true           # Inhaltsverzeichnis aktivieren
+    toc-location: right # Rechts positioniert
+    number-sections: true
+    smooth-scroll: true
+    fig-cap-location: bottom
+    # Optimierung für Quarto Pub Speicherplatz (DPI senken)
+    fig-dpi: 150
