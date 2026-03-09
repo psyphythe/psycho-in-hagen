@@ -29,12 +29,13 @@ website:
 
 format:
   html:
-    theme: cosmo        # Ein schlichtes, professionelles Design
-    code-fold: true     # Code-Blöcke sind standardmäßig eingeklappt (spart Platz/Übersicht)
+    theme: cerulean        
+    mainfont: "EB Garamond, Georgia, serif"
+    code-fold: true     
     code-summary: "Code anzeigen"
-    title-block-style: default # Schaltet den Standard-Block oben aus
-    toc: true           # Inhaltsverzeichnis aktivieren
-    toc-location: right # Rechts positioniert
+    title-block-style: default 
+    toc: true           
+    toc-location: right 
     number-sections: true
     smooth-scroll: true
     fig-cap-location: bottom
