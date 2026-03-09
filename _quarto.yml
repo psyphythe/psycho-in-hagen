@@ -21,6 +21,8 @@ website:
             text: "Computations"
           - href: hello.qmd
             text: "Hello"
+          - href: links.qmd
+            text: "Nuetzliche Links"
 #
   page-footer:
     left: >-
