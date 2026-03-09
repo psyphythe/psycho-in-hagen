@@ -1,0 +1,117 @@
+{
+  "cells": [
+    {
+      "cell_type": "raw",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: My First Quarto Test\n",
+        "author: naenaenae\n",
+        "date: '2026-03-05'\n",
+        "format:\n",
+        "  html:\n",
+        "    code-fold: true\n",
+        "---"
+      ],
+      "id": "6044b243"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# | label: load-packages\n",
+        "# | include: false\n",
+        "\n",
+        "## Creating a line plot in Python\n",
+        "\n",
+        "We demonstrate how to create a simple line plot in Python, in the following steps:\n",
+        "\n",
+        "- We import the `matplotlib` library\n",
+        "- We create data, saved in `x` and `y`\n",
+        "- We create the plot with the `plt.plot` function."
+      ],
+      "id": "4224abe2"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Data for plotting\n",
+        "x = [0, 1, 2, 3, 4]\n",
+        "y = [0, 1, 4, 9, 16]\n",
+        "\n",
+        "# Create the plot\n",
+        "plt.plot(x, y)\n",
+        "plt.title(\"Simple Line Plot\")\n",
+        "plt.xlabel(\"X-axis\")\n",
+        "plt.ylabel(\"Y-axis\")\n",
+        "plt.show()"
+      ],
+      "id": "b7b75eda",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "#### Weiterer Versuch\n",
+        "\n",
+        "## Creating a scatter plot in R\n",
+        "\n",
+        "```{r}\n",
+        "#| echo: true\n",
+        "#| message: true\n",
+        "#| warning: true\n",
+        "\n",
+        "# Load ggplot2 for plotting\n",
+        "library(ggplot2)\n",
+        "\n",
+        "# Create a simple scatter plot\n",
+        "data <- data.frame(x = 1:10, y = (1:10)^2)\n",
+        "\n",
+        "ggplot(data, aes(x = x, y = y)) +\n",
+        "  geom_point() +\n",
+        "  geom_line() +\n",
+        "  ggtitle(\"Simple Scatter Plot with ggplot2\") +\n",
+        "  xlab(\"X-axis\") +\n",
+        "  ylab(\"Y-axis\")\n",
+        "```\n",
+        "\n",
+        "```{r}\n",
+        "#| echo: false\n",
+        "#| message: false\n",
+        "#| warning: false\n",
+        "\n",
+        "# Load ggplot2 for plotting\n",
+        "library(ggplot2)\n",
+        "\n",
+        "# Create a simple scatter plot\n",
+        "data <- data.frame(x = 1:10, y = (1:10)^2)\n",
+        "\n",
+        "ggplot(data, aes(x = x, y = y)) +\n",
+        "  geom_point() +\n",
+        "  geom_line() +\n",
+        "  ggtitle(\"Simple Scatter Plot with ggplot2\") +\n",
+        "  xlab(\"X-axis\") +\n",
+        "  ylab(\"Y-axis\")\n",
+        "```\n",
+        "\n",
+        "###### Ende"
+      ],
+      "id": "75dbc607"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\tarob\\AppData\\Local\\Python\\pythoncore-3.14-64\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
