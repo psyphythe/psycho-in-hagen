@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "start.html",
+    "href": "start.html",
+    "title": "My First Quarto Test",
+    "section": "",
+    "text": "We demonstrate how to create a simple line plot in Python, in the following steps:\n\nWe import the matplotlib library\nWe create data, saved in x and y\nWe create the plot with the plt.plot function.\n\n\n\nCode anzeigen\nimport matplotlib.pyplot as plt\n\n# Data for plotting\nx = [0, 1, 2, 3, 4]\ny = [0, 1, 4, 9, 16]\n\n# Create the plot\nplt.plot(x, y)\nplt.title(\"Simple Line Plot\")\nplt.xlabel(\"X-axis\")\nplt.ylabel(\"Y-axis\")\nplt.show()"
+  },
+  {
+    "objectID": "start.html#creating-a-line-plot-in-python",
+    "href": "start.html#creating-a-line-plot-in-python",
+    "title": "My First Quarto Test",
+    "section": "",
+    "text": "We demonstrate how to create a simple line plot in Python, in the following steps:\n\nWe import the matplotlib library\nWe create data, saved in x and y\nWe create the plot with the plt.plot function.\n\n\n\nCode anzeigen\nimport matplotlib.pyplot as plt\n\n# Data for plotting\nx = [0, 1, 2, 3, 4]\ny = [0, 1, 4, 9, 16]\n\n# Create the plot\nplt.plot(x, y)\nplt.title(\"Simple Line Plot\")\nplt.xlabel(\"X-axis\")\nplt.ylabel(\"Y-axis\")\nplt.show()"
+  },
+  {
+    "objectID": "start.html#creating-a-scatter-plot-in-r",
+    "href": "start.html#creating-a-scatter-plot-in-r",
+    "title": "My First Quarto Test",
+    "section": "2 Creating a scatter plot in R",
+    "text": "2 Creating a scatter plot in R\n#| echo: true\n#| message: true\n#| warning: true\n\n# Load ggplot2 for plotting\nlibrary(ggplot2)\n\n# Create a simple scatter plot\ndata &lt;- data.frame(x = 1:10, y = (1:10)^2)\n\nggplot(data, aes(x = x, y = y)) +\n  geom_point() +\n  geom_line() +\n  ggtitle(\"Simple Scatter Plot with ggplot2\") +\n  xlab(\"X-axis\") +\n  ylab(\"Y-axis\")\n#| echo: false\n#| message: false\n#| warning: false\n\n# Load ggplot2 for plotting\nlibrary(ggplot2)\n\n# Create a simple scatter plot\ndata &lt;- data.frame(x = 1:10, y = (1:10)^2)\n\nggplot(data, aes(x = x, y = y)) +\n  geom_point() +\n  geom_line() +\n  ggtitle(\"Simple Scatter Plot with ggplot2\") +\n  xlab(\"X-axis\") +\n  ylab(\"Y-axis\")\n\n2.0.0.0.1 Ende"
+  },
+  {
+    "objectID": "hello.html",
+    "href": "hello.html",
+    "title": "Hello, Quarto - TEST",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "hello.html#meet-quarto",
+    "href": "hello.html#meet-quarto",
+    "title": "Hello, Quarto - TEST",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "hello.html#meet-the-penguins",
+    "href": "hello.html#meet-the-penguins",
+    "title": "Hello, Quarto - TEST",
+    "section": "0.2 Meet the penguins",
+    "text": "0.2 Meet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\n\n\n\n\n\n\n\n\n\\{r} #| echo: true #| message: true #| warning: true"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Psycho in Hagen",
+    "section": "",
+    "text": "Anna, Studentin in Hagen"
+  },
+  {
+    "objectID": "computations.html",
+    "href": "computations.html",
+    "title": "Quarto Computations",
+    "section": "",
+    "text": "This dataset contains a subset of the fuel economy data from the EPA. Specifically, we use the mpg dataset from the ggplot2 package.\nThe visualization below shows a positive, strong, and linear relationship between the city and highway mileage of these cars. Additionally, mileage is higher for cars with fewer cylinders.\n\n\nCode anzeigen\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "1 M2 Statistik (SS26)",
+    "section": "",
+    "text": "1 M2 Statistik (SS26)\nM2 Statistik\n\n\n2 M4 Sozialpsychologie"
+  },
+  {
+    "objectID": "right-margin.html",
+    "href": "right-margin.html",
+    "title": "Psycho in Hagen",
+    "section": "",
+    "text": "Anna\nHi, I’m a developer based in Munich. I’m interested in Psychology."
+  }
+]
