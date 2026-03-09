@@ -1,5 +1,5 @@
 # M2 Statistik (SS26)
-[M2 Statistik](m2_home.md)
+[M2 Statistik](m2_home.qmd)
 
 # M4 Sozialpsychologie
 

@@ -13,9 +13,7 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
-      - href: m2_home.md
+      - href: m2_home.qmd
         text: "M2 Statistik"
       - text: "Quartobeispiele"
         menu:
@@ -27,6 +25,7 @@ website:
   page-footer:
     left: >-
       © 2026 Anna
+    right: "made with ❤️ and [Quarto.org](https://quarto.org)"
 
 format:
   html:
