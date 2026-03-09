@@ -15,7 +15,9 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - text: "M2 Statistik"
+      - href: m2_home.md
+        text: "M2 Statistik"
+      - text: "Quartobeispiele"
         menu:
           - href: computations.qmd
             text: "Computations"

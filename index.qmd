@@ -1,5 +1,6 @@
 # M2 Statistik (SS26)
-##### Guido Statstutor
+[M2 Statistik](m2_home.md)
+
 # M4 Sozialpsychologie
 
 <!-- AddToAny BEGIN -->
