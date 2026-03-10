@@ -16,20 +16,20 @@ mittlerer Wert; 50% der Werte sind größer und 50% der Werte sind kleiner
 der am häufigsten vorkommende Wert
 
 ##### Geometrisches Mittel
-n-te Wurzel aus dem Produkt der n Werte
-stets kleiner als da arithmetische Mittel
+n-te Wurzel aus dem Produkt der n Werte\\
+stets kleiner als da arithmetische Mittel\\
 geom. Mittel = $ \sqrt[n]{\prod_{i_1}^{n}x_i}
 
 ##### Quartil
-teilt Datenreihe in vier gleich große Bereiche
-25% der Daten liegen unter Q1 - unteres Quartil
-Q2 - zweites Quantil entspricht dem Median
-75% der Daten liegen unter Q3 - oberes Quartil
+teilt Datenreihe in vier gleich große Bereiche\\
+25% der Daten liegen unter Q1 - unteres Quartil\\
+Q2 - zweites Quantil entspricht dem Median\\
+75% der Daten liegen unter Q3 - oberes Quartil\\
 Interquartilsabstand (=Q3-Q1) enthält mittlere 50% der Daten
 
 ##### Quantil 
-Verallgemeinerung Quartil
-p-Quartil: links sind p der Werte, rechts 1-p
+Verallgemeinerung Quartil\\
+p-Quartil: links sind p der Werte, rechts 1-p\\
 Q3 entspricht damit p = 75%
 
 
