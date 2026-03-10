@@ -6,38 +6,69 @@ image: pics/Statistik.png
 ![ ](pics/Statistik.png){.column-screen-metadata}
 
 # Deskriptive Statistik
-###### Arithmetisches Mittel
-arithm. Mittel = $\sum \frac{Alle\, Werte}{Anzahl\, Werte}$
-
-###### Median
-mittlerer Wert; 50% der Werte sind größer und 50% der Werte sind kleiner
-
-###### Modalwert
-der am häufigsten vorkommende Wert
-
-##### Geometrisches Mittel
-n-te Wurzel aus dem Produkt der n Werte\\
-stets kleiner als da arithmetische Mittel\\
-geom. Mittel = $ \sqrt[n]{\prod_{i_1}^{n} x_i } $
-
-##### Quartil
-teilt Datenreihe in vier gleich große Bereiche\\
-25% der Daten liegen unter Q1 - unteres Quartil\\
-Q2 - zweites Quantil entspricht dem Median\\
-75% der Daten liegen unter Q3 - oberes Quartil\\
-Interquartilsabstand (=Q3-Q1) enthält mittlere 50% der Daten
-
-##### Quantil 
-Verallgemeinerung Quartil\\
-p-Quartil: links sind p der Werte, rechts 1-p\\
-Q3 entspricht damit p = 75%\\
-
-
-```markdown
+**Arithmetisches Mittel**  
+arithm. Mittel = $\sum \frac{Alle\, Werte}{Anzahl\, Werte}$  
+in R: _mean_
 ```{r}
-#| echo: true
-# Beispiel: Mittelwert berechnen für M2
-noten <- c(1.3, 2.0, 1.7, 3.3)
+noten <- c(1.3, 2.0, 1.7, 3.3, 2.3)
 mean(noten)
 ```
 
+**Median**  
+mittlerer Wert; 50% der Werte sind größer und 50% der Werte sind kleiner  
+in R: _median_
+```{r}
+noten <- c(1.3, 2.0, 1.7, 3.3, 2.3)
+median(noten)
+```
+
+**Modalwert**  
+der am häufigsten vorkommende Wert
+
+**Geometrisches Mittel**  
+n-te Wurzel aus dem Produkt der n Werte  
+stets kleiner als da arithmetische Mittel  
+geom. Mittel = $\sqrt[n]{\prod_{i_1}^{n}x_i}$  
+```{r}
+gm <- function(x){
+  return( prod(x)^(1/length(x)) )
+}
+daten <- c(2, 4, 8)
+gm(daten) # Ergibt 4 [7]
+``` 
+
+
+**Quartil**  
+teilt Datenreihe in vier gleich große Bereiche  
+25% der Daten liegen unter Q1 - unteres Quartil  
+Q2 - zweites Quantil entspricht dem Median  
+75% der Daten liegen unter Q3 - oberes Quartil  
+in R: _quantile_
+```{r}
+daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
+quantile(daten)
+```
+
+**Interquartilsabstand**  
+(=Q3-Q1) Abstand der mittleren 50% der Daten  
+in R: _IQR_
+```{r}
+daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
+IQR(daten)
+```
+
+einfacher: in R: _summary_
+```{r}
+daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
+summary(daten)
+```
+
+**Quantil**  
+Verallgemeinerung Quartil  
+p-Quartil: links sind p der Werte, rechts 1-p  
+Q3 entspricht damit p = 75%  
+in R: _quantile(x, probs)_
+```{r}
+daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
+quantile(daten, probs = c(0.3, 0.6, 0.9))
+```

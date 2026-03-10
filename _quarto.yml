@@ -50,9 +50,8 @@ format:
     execute:
       echo: true
       warning: false
-    code-fold: true     
+    code-fold: show     
     code-summary: "R-Code anzeigen"
-    code-tools: true
     title-block-style: default 
     toc: true           
     toc-location: right 
