@@ -1,0 +1,7 @@
+---
+title: "M4 Sozialpsychologie"
+image: pics/sozpsy.png
+---
+![ ](pics/sozpsy.png){.column-screen-metadata}
+
+Bliblablub, hier kommt noch ganz viel

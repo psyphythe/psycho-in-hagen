@@ -47,8 +47,12 @@ format:
     mainfont: "EB Garamond, Georgia, serif"
     date: last-modified
     date-format: "DD.MM.YYYY"
+    execute:
+      echo: true
+      warning: false
     code-fold: true     
-    code-summary: "Code anzeigen"
+    code-summary: "R-Code anzeigen"
+    code-tools: true
     title-block-style: default 
     toc: true           
     toc-location: right 

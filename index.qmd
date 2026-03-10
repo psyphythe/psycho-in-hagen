@@ -1,4 +1,15 @@
-# M2 Statistik (SS26)
-[M2 Statistik](m2_home.qmd)
+---
+title: "Psycho in Hagen - Mitschriften"
+listing:
+  contents: 
+    - "m2_home.qmd"
+    - "m4_home.qmd" 
+  type: grid
+  categories: true
+---
 
-# M4 Sozialpsychologie
+<style>
+.quarto-listing-container-grid .card-img-top {
+  object-fit: contain !important;
+}
+</style>
