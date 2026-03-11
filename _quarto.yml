@@ -54,6 +54,7 @@ format:
     title-block-style: default 
     toc: true           
     toc-location: right 
+    toc-expand: true
     number-sections: true
     smooth-scroll: true
     fig-cap-location: bottom
