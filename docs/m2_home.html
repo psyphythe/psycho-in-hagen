@@ -265,9 +265,7 @@ in R: <em>median</em></p>
 <p><strong>Modalwert</strong><br>
 der am häufigsten vorkommende Wert</p>
 <p><strong>Geometrisches Mittel</strong><br>
-n-te Wurzel aus dem Produkt der n Werte<br>
-stets kleiner als da arithmetische Mittel<br>
-geom. Mittel = <span class="math inline">\(\sqrt[n]{\prod_{i_1}^{n}x_i}\)</span></p>
+n-te Wurzel aus dem Produkt der n Werte<br> stets kleiner als da arithmetische Mittel<br> geom. Mittel = <span class="math inline">\(\sqrt[n]{\prod_{i_1}^{n}x_i}\)</span></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
@@ -282,10 +280,7 @@ geom. Mittel = <span class="math inline">\(\sqrt[n]{\prod_{i_1}^{n}x_i}\)</span>
 </div>
 </div>
 <p><strong>Quartil</strong><br>
-teilt Datenreihe in vier gleich große Bereiche<br>
-25% der Daten liegen unter Q1 - unteres Quartil<br>
-Q2 - zweites Quantil entspricht dem Median<br>
-75% der Daten liegen unter Q3 - oberes Quartil<br>
+teilt Datenreihe in vier gleich große Bereiche<br> 25% der Daten liegen unter Q1 - unteres Quartil<br> Q2 - zweites Quantil entspricht dem Median<br> 75% der Daten liegen unter Q3 - oberes Quartil<br>
 in R: <em>quantile</em></p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -324,9 +319,7 @@ in R: <em>IQR</em></p>
 </div>
 </div>
 <p><strong>Quantil</strong><br>
-Verallgemeinerung Quartil<br>
-p-Quartil: links sind p der Werte, rechts 1-p<br>
-Q3 entspricht damit p = 75%<br>
+Verallgemeinerung Quartil<br> p-Quartil: links sind p der Werte, rechts 1-p<br> Q3 entspricht damit p = 75%<br>
 in R: <em>quantile(x, probs)</em></p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -339,39 +332,64 @@ in R: <em>quantile(x, probs)</em></p>
  18  45  80 </code></pre>
 </div>
 </div>
-<hr>
-<p><em>Randomisierte Zahlen</em><br>
-<em>Boxplots</em></p>
-<p>todo</p>
+<p><strong>Vektor</strong><br>
+Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammengefügt</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>menge <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(menge)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>vektor <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>Zufallszahlen</strong><br>
+Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen, arith. Mittel, Standardabweichung) verwendet werden, die Zahlen aus der Normalverteilung angibt</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>R-Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>zufall <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">0</span>, <span class="dv">17</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(zufall)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
--1.3482 -1.0988 -0.5838 -0.1273  0.1322  3.2228 </code></pre>
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-25.8435 -13.4234   0.0686  -2.6535   7.1055  22.8652 </code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(menge)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zufall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -12.84621274   6.80852085  -7.94336722  -4.31861320   1.48469388
+ [6]   1.36813115 -15.15485066  14.36845472   0.10871364   5.99787455
+[11]  22.86522428 -24.47468117 -25.84351714  -9.05761859 -15.82899455
+[16]  10.91695820   7.99655153 -21.16602522   0.02848827  11.62007724</code></pre>
+</div>
+</div>
+<p><strong>Histogramm</strong><br>
+graphische Darstellung der Häufigkeitsverteilung</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>R-Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(zufall)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="m2_home_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="1050"></p>
+<p><img src="m2_home_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="1050"></p>
 </figure>
 </div>
 </div>
+</div>
+<p><strong>Boxplot</strong><br>
+Dartellung der Verteilung<br> Darstellung der Medians, der Quartile Q1 und Q3, Whiskern und Ausreißern<br> Whisker sind der letzte Wert, der sich max. das 1,5-fache des IQR von Q1 bzw. Q3 befindet<br> Ausreißer weiter entfernt, durch Kreis gekennzeichnet</p>
+<div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(menge, <span class="at">horizontal =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>boxwert <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="fl">12.5</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(boxwert, <span class="at">horizontal =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="m2_home_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="1050"></p>
+<p><img src="m2_home_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="1050"></p>
 </figure>
 </div>
 </div>

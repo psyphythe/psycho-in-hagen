@@ -6,5 +6,4 @@ listing:
     - "m4_home.qmd" 
   type: grid
   fields: [image]
-  image-height: "310px"
 ---

@@ -23,8 +23,8 @@ median(noten)
 der am häufigsten vorkommende Wert
 
 **Geometrisches Mittel**  
-n-te Wurzel aus dem Produkt der n Werte  
-stets kleiner als da arithmetische Mittel  
+n-te Wurzel aus dem Produkt der n Werte<br>
+stets kleiner als da arithmetische Mittel<br>
 geom. Mittel = $\sqrt[n]{\prod_{i_1}^{n}x_i}$  
 ```{r}
 gm <- function(x){
@@ -36,9 +36,9 @@ gm(daten) # Ergibt 4 [7]
 
 
 **Quartil**  
-teilt Datenreihe in vier gleich große Bereiche  
-25% der Daten liegen unter Q1 - unteres Quartil  
-Q2 - zweites Quantil entspricht dem Median  
+teilt Datenreihe in vier gleich große Bereiche<br>
+25% der Daten liegen unter Q1 - unteres Quartil<br>
+Q2 - zweites Quantil entspricht dem Median<br>
 75% der Daten liegen unter Q3 - oberes Quartil  
 in R: _quantile_
 ```{r}
@@ -61,8 +61,8 @@ summary(daten)
 ```
 
 **Quantil**  
-Verallgemeinerung Quartil  
-p-Quartil: links sind p der Werte, rechts 1-p  
+Verallgemeinerung Quartil<br>
+p-Quartil: links sind p der Werte, rechts 1-p<br>
 Q3 entspricht damit p = 75%  
 in R: _quantile(x, probs)_
 ```{r}
@@ -70,16 +70,31 @@ daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
 quantile(daten, probs = c(0.3, 0.6, 0.9))
 ```
 
----
-
-_Randomisierte Zahlen_  
-_Boxplots_  
-
-todo
-
+**Vektor**  
+Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammengefügt
 ```{r}
-menge <- rnorm(20,0,1)
-summary(menge)
-hist(menge)
-boxplot(menge, horizontal = TRUE)
+vektor <- c(1,2,3,4,5)
+```
+
+**Zufallszahlen**  
+Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen, arith. Mittel, Standardabweichung) verwendet werden, die Zahlen aus der Normalverteilung angibt
+```{r}
+zufall <- rnorm(20, 0, 17)
+summary(zufall)
+zufall
+```
+**Histogramm**  
+graphische Darstellung der Häufigkeitsverteilung
+```{r}
+hist(zufall)
+```
+
+**Boxplot**  
+Dartellung der Verteilung<br>
+Darstellung der Medians, der Quartile Q1 und Q3, Whiskern und Ausreißern<br>
+Whisker sind der letzte Wert, der sich max. das 1,5-fache des IQR von Q1 bzw. Q3 befindet<br>
+Ausreißer weiter entfernt, durch Kreis gekennzeichnet
+```{r}
+boxwert <- c(0,4,5,6,7,2,5,1,12.5)
+boxplot(boxwert, horizontal = TRUE)
 ```
