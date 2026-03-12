@@ -5,14 +5,6 @@ listing:
     - "m2_home.qmd"
     - "m4_home.qmd" 
   type: grid
-  categories: true
   fields: [image]
-  grid-columns: 2
-  image-height: "250px"
+  image-height: "310px"
 ---
-
-<style>
-.quarto-listing-container-grid .card-img-top {
-  object-fit: contain !important;
-}
-</style>
