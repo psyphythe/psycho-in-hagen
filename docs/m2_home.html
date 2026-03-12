@@ -265,7 +265,9 @@ in R: <em>median</em></p>
 <p><strong>Modalwert</strong><br>
 der am häufigsten vorkommende Wert</p>
 <p><strong>Geometrisches Mittel</strong><br>
-n-te Wurzel aus dem Produkt der n Werte<br> stets kleiner als da arithmetische Mittel<br> geom. Mittel = <span class="math inline">\(\sqrt[n]{\prod_{i_1}^{n}x_i}\)</span></p>
+n-te Wurzel aus dem Produkt der n Werte<br>
+stets kleiner als da arithmetische Mittel<br>
+geom. Mittel = <span class="math inline">\(\sqrt[n]{\prod_{i_1}^{n}x_i}\)</span></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
@@ -280,7 +282,10 @@ n-te Wurzel aus dem Produkt der n Werte<br> stets kleiner als da arithmetische M
 </div>
 </div>
 <p><strong>Quartil</strong><br>
-teilt Datenreihe in vier gleich große Bereiche<br> 25% der Daten liegen unter Q1 - unteres Quartil<br> Q2 - zweites Quantil entspricht dem Median<br> 75% der Daten liegen unter Q3 - oberes Quartil<br>
+teilt Datenreihe in vier gleich große Bereiche<br>
+25% der Daten liegen unter Q1 - unteres Quartil<br>
+Q2 - zweites Quantil entspricht dem Median<br>
+75% der Daten liegen unter Q3 - oberes Quartil<br>
 in R: <em>quantile</em></p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -319,7 +324,9 @@ in R: <em>IQR</em></p>
 </div>
 </div>
 <p><strong>Quantil</strong><br>
-Verallgemeinerung Quartil<br> p-Quartil: links sind p der Werte, rechts 1-p<br> Q3 entspricht damit p = 75%<br>
+Verallgemeinerung Quartil<br>
+p-Quartil: links sind p der Werte, rechts 1-p<br>
+Q3 entspricht damit p = 75%<br>
 in R: <em>quantile(x, probs)</em></p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -349,18 +356,18 @@ Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen,
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(zufall)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
--25.8435 -13.4234   0.0686  -2.6535   7.1055  22.8652 </code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-43.620 -10.223  -5.585  -2.787   6.389  23.984 </code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zufall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -12.84621274   6.80852085  -7.94336722  -4.31861320   1.48469388
- [6]   1.36813115 -15.15485066  14.36845472   0.10871364   5.99787455
-[11]  22.86522428 -24.47468117 -25.84351714  -9.05761859 -15.82899455
-[16]  10.91695820   7.99655153 -21.16602522   0.02848827  11.62007724</code></pre>
+<pre><code> [1] -43.620390 -17.571846 -18.773847   5.567261  14.233163   8.164144
+ [7] -10.724319 -13.433923   1.167143  23.984204   5.797866  -5.528379
+[13]  -5.754225   9.051120 -10.055761   1.804752  -5.950374  18.946878
+[19]  -7.395333  -5.641232</code></pre>
 </div>
 </div>
 <p><strong>Histogramm</strong><br>
@@ -379,7 +386,10 @@ graphische Darstellung der Häufigkeitsverteilung</p>
 </div>
 </div>
 <p><strong>Boxplot</strong><br>
-Dartellung der Verteilung<br> Darstellung der Medians, der Quartile Q1 und Q3, Whiskern und Ausreißern<br> Whisker sind der letzte Wert, der sich max. das 1,5-fache des IQR von Q1 bzw. Q3 befindet<br> Ausreißer weiter entfernt, durch Kreis gekennzeichnet</p>
+Dartellung der Verteilung<br>
+Darstellung der Medians, der Quartile Q1 und Q3, Whiskern und Ausreißern<br>
+Whisker sind der letzte Wert, der sich max. das 1,5-fache des IQR von Q1 bzw. Q3 befindet<br>
+Ausreißer weiter entfernt, durch Kreis gekennzeichnet</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
