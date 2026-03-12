@@ -6,6 +6,9 @@ listing:
     - "m4_home.qmd" 
   type: grid
   categories: true
+  fields: [image]
+  grid-columns: 2
+  image-height: "250px"
 ---
 
 <style>

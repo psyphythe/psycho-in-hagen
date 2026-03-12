@@ -2,9 +2,6 @@
 title: "M2 Statistik (SS26)"
 image: pics/Statistik.png
 ---
-
-![ ](pics/Statistik.png){.column-screen-metadata}
-
 # Deskriptive Statistik
 **Arithmetisches Mittel**  
 arithm. Mittel = $\sum \frac{Alle\, Werte}{Anzahl\, Werte}$  
