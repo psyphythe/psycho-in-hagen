@@ -3,7 +3,8 @@ title: "Psycho in Hagen - Mitschriften"
 listing:
   contents: 
     - "m2_home.qmd"
-    - "m4_home.qmd" 
+    - "m4_home.qmd"
+    - "m6a_home.qmq" 
   type: grid
   fields: [image]
 ---
