@@ -1,6 +1,6 @@
 ---
 title: "M6a Test- und Fragebogenkonstruktion"
-image: pics/64_bild.png
+image: pics/6a_bild.png
 ---
 
 Bliblablub, hier kommt noch ganz viel
