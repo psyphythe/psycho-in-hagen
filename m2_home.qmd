@@ -64,7 +64,7 @@ taks/todo: Eid 5.3.4
 Eine Relation R $\circ$ heißt Äquivalenzrelation, wenn sie 
 folgende drei Anforderungen erfüllt:
 
-(1) R ist reflexiv, d.h., für alle u $\in$ U gilt: u $\circx$ u. 
+(1) R ist reflexiv, d.h., für alle u $\in$ U gilt: u $\circ$ u. 
 (2) R ist symmetrisch, d.h., für alle u, v$\in$ U gilt: 
 u $\circ$ v → v $\circ$ u.
 (3) R ist transitiv, d.h., für alle u, v, w $\in$ U gilt: 
