@@ -202,7 +202,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link active" data-scroll-target="#deskriptive-statistik"><span class="header-section-number">1</span> Deskriptive Statistik</a></li>
+  <li><a href="#messtheoretische-grundlagen" id="toc-messtheoretische-grundlagen" class="nav-link active" data-scroll-target="#messtheoretische-grundlagen">Messtheoretische Grundlagen</a>
+  <ul class="collapse">
+  <li><a href="#skalenniveaus" id="toc-skalenniveaus" class="nav-link" data-scroll-target="#skalenniveaus">Skalenniveaus</a></li>
+  </ul></li>
+  <li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik">Deskriptive Statistik</a></li>
   </ul>
 </nav>
     </div>
@@ -222,7 +226,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">12.03.2026</p>
+      <p class="date">18.03.2026</p>
     </div>
   </div>
   
@@ -234,8 +238,75 @@ window.Quarto = {
 </header>
 
 
-<section id="deskriptive-statistik" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Deskriptive Statistik</h1>
+<p>Chaos in Notizenform</p>
+<section id="messtheoretische-grundlagen" class="level1">
+<h1>Messtheoretische Grundlagen</h1>
+<section id="skalenniveaus" class="level3">
+<h3 class="anchored" data-anchor-id="skalenniveaus">Skalenniveaus</h3>
+<p><strong>NOIRA</strong>-Regel</p>
+<ul>
+<li>Nominalskala</li>
+<li>Ordinalskala</li>
+<li>Intervallskala</li>
+<li>Ratio-/Verhältnisskala</li>
+<li>Absolutskala</li>
+</ul>
+<p><strong>Nominalskala</strong></p>
+<ul>
+<li>Namen/Kategorien</li>
+<li>Unterscheidung zwischen Gleich und Ungleich, keine Sortierung/Besser/Schlecht</li>
+<li>Beispiele: Geschlecht, Augenfarbe, Matrikelnummer, Wohnort</li>
+<li>Zentrale Tendenz: Nur der Modus (der häufigste Wert) ist sinnvoll</li>
+<li>Dispersion: Hier kommt der Relativer Informationsgehalt <span class="math inline">\(H\)</span> ins Spiel.</li>
+</ul>
+<p><strong>Ordinalskala</strong></p>
+<ul>
+<li>Rangordnung</li>
+<li>Unterscheidung zusätzlich eine “Größer-Kleiner”-Relation (<span class="math inline">\(A &gt; B\)</span>)</li>
+<li>Beispiele: Tabellenplätze beim Sport, Schulnoten, Windstärken, höchste Bildungsabschlüsse</li>
+<li>Wichtig: Die Abstände zwischen den Rängen sind nicht interpretierbar (der Abstand zwischen Platz 1 und 2 ist nicht zwingend derselbe wie zwischen Platz 2 und 3)</li>
+<li>Zentrale Tendenz: Der Median ist hier das Maß der Wahl</li>
+</ul>
+<p><strong>Intervallskala</strong></p>
+<ul>
+<li>gleiche Abstände: Abstände/Intervalle zwischen den Werten gleich groß und interpretierbar</li>
+<li>Beispiele: Temperatur in Grad Celsius, IQ-Werte, Kalenderjahre</li>
+<li>Besonderheit: Es gibt keinen natürlichen Nullpunkt. (0°C bedeutet nicht “keine Temperatur”)</li>
+<li>Zentrale Tendenz: arithmetisches Mittel (Durchschnitt)</li>
+</ul>
+<p><strong>Ratio-/Verhältnisskala</strong></p>
+<ul>
+<li>zusätzlich natürlicher Nullpunkt</li>
+<li>Beispiele: Einkommen, Alter in Jahren, Reaktionszeit in ms, Gewicht</li>
+<li>Vorteil: Verhältnisbildung “A ist doppelt so alt wie B” (Aber 20°C ist nicht doppelt so warm wie 10°C)</li>
+<li>Einheit willkürlich festgelegt, ob zB in Gramm oder Pfund gemessen unerheblich</li>
+</ul>
+<p><strong>Absolutskala</strong></p>
+<ul>
+<li>auch Maßeinheit natürlich vorgegeben und unveränderlich</li>
+<li>zumeist Häufigkeiten/Anzahl</li>
+<li>Beispiele: Anzahl der Kinder in einer Familie, Anzahl der Fehler in einem Test, Anzahl der Studierenden im Modul M2.</li>
+</ul>
+<section id="äquivalenzrelation" class="level6">
+<h6 class="anchored" data-anchor-id="äquivalenzrelation">Äquivalenzrelation</h6>
+<p>Eine Relation R <span class="math inline">\(\circle\)</span> heißt Äquivalenzrelation, wenn sie folgende drei Anforderungen erfüllt:</p>
+<ol type="1">
+<li>R ist reflexiv, d.h., für alle u <span class="math inline">\(\in\)</span> U gilt: u <span class="math inline">\(\circlex\)</span> u.</li>
+<li>R ist symmetrisch, d.h., für alle u, v<span class="math inline">\(\in\)</span> U gilt: u <span class="math inline">\(\circ\)</span> v → v <span class="math inline">\(\circle\)</span> u.</li>
+<li>R ist transitiv, d.h., für alle u, v, w <span class="math inline">\(\in\)</span> U gilt: (u <span class="math inline">\(\circle\)</span> v <span class="math inline">\(\and\)</span> v<span class="math inline">\(\circle\)</span>w) → u<span class="math inline">\(\circle\)</span>w.<br>
+Für die Äquivalenzrelation verwenden wir das Zeichen ≈.</li>
+</ol>
+<p><strong>Merkmals-xx</strong></p>
+<ul>
+<li><strong>Merkmalsträger:</strong> Das Objekt, das untersucht wird (z. B. ein Student).</li>
+<li><strong>Merkmal:</strong> Die interessierende Eigenschaft (z. B. die Körpergröße)</li>
+<li><strong>Merkmalsausprägung:</strong> Der konkrete Wert, den dieser spezielle Merkmalsträger hat (z. B. 1,80 m)</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="deskriptive-statistik" class="level1">
+<h1>Deskriptive Statistik</h1>
 <p><strong>Arithmetisches Mittel</strong><br>
 arithm. Mittel = <span class="math inline">\(\sum \frac{Alle\, Werte}{Anzahl\, Werte}\)</span><br>
 in R: <em>mean</em></p>
@@ -298,9 +369,7 @@ in R: <em>quantile</em></p>
    3   15   30   55  100 </code></pre>
 </div>
 </div>
-<p><strong>Interquartilsabstand</strong><br>
-(=Q3-Q1) Abstand der mittleren 50% der Daten<br>
-in R: <em>IQR</em></p>
+<p><strong>Interquartilsabstand</strong>&nbsp; (=Q3-Q1) Abstand der mittleren 50% der Daten&nbsp; in R: <em>IQR</em></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
@@ -323,8 +392,7 @@ in R: <em>IQR</em></p>
    3.00   15.00   30.00   39.09   55.00  100.00 </code></pre>
 </div>
 </div>
-<p><strong>Quantil</strong><br>
-Verallgemeinerung Quartil<br>
+<p><strong>Quantil</strong>&nbsp; Verallgemeinerung Quartil<br>
 p-Quartil: links sind p der Werte, rechts 1-p<br>
 Q3 entspricht damit p = 75%<br>
 in R: <em>quantile(x, probs)</em></p>
@@ -347,8 +415,7 @@ Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammeng
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>vektor <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p><strong>Zufallszahlen</strong><br>
-Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen, arith. Mittel, Standardabweichung) verwendet werden, die Zahlen aus der Normalverteilung angibt</p>
+<p><strong>Zufallszahlen</strong>&nbsp; Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen, arith. Mittel, Standardabweichung) verwendet werden, die Zahlen aus der Normalverteilung angibt</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
@@ -357,17 +424,17 @@ Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen,
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
--43.620 -10.223  -5.585  -2.787   6.389  23.984 </code></pre>
+-30.019 -16.187  -6.062  -2.729  11.747  33.388 </code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zufall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -43.620390 -17.571846 -18.773847   5.567261  14.233163   8.164144
- [7] -10.724319 -13.433923   1.167143  23.984204   5.797866  -5.528379
-[13]  -5.754225   9.051120 -10.055761   1.804752  -5.950374  18.946878
-[19]  -7.395333  -5.641232</code></pre>
+<pre><code> [1]  -5.916318 -30.019495  17.383435  20.918651 -11.454643  24.923101
+ [7] -18.340451 -21.685755  -3.943551 -15.034874   9.867726  -6.208163
+[13] -26.877600 -17.175724  33.387963   1.311931 -11.522810  -2.173865
+[19] -15.858065  23.836233</code></pre>
 </div>
 </div>
 <p><strong>Histogramm</strong><br>
@@ -385,8 +452,7 @@ graphische Darstellung der Häufigkeitsverteilung</p>
 </div>
 </div>
 </div>
-<p><strong>Boxplot</strong><br>
-Dartellung der Verteilung<br>
+<p><strong>Boxplot</strong>&nbsp; Dartellung der Verteilung<br>
 Darstellung der Medians, der Quartile Q1 und Q3, Whiskern und Ausreißern<br>
 Whisker sind der letzte Wert, der sich max. das 1,5-fache des IQR von Q1 bzw. Q3 befindet<br>
 Ausreißer weiter entfernt, durch Kreis gekennzeichnet</p>

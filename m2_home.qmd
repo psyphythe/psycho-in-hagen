@@ -1,31 +1,113 @@
 ---
 title: "M2 Statistik (SS26)"
 image: pics/Statistik.png
+format:
+  html:
+    number-sections: false
 ---
+Chaos in Notizenform
+
+taks/todo: Eid 5.3.4
+
+
+# Messtheoretische Grundlagen
+### Skalenniveaus
+**NOIRA**-Regel
+
+- Nominalskala
+- Ordinalskala
+- Intervallskala
+- Ratio-/Verhältnisskala
+- Absolutskala
+
+**Nominalskala**
+
+- Namen/Kategorien
+- Unterscheidung zwischen Gleich und Ungleich, keine
+  Sortierung/Besser/Schlecht
+- Beispiele: Geschlecht, Augenfarbe, Matrikelnummer, Wohnort
+- Zentrale Tendenz: Nur der Modus (der häufigste Wert) ist sinnvoll
+- Dispersion: Hier kommt der Relativer Informationsgehalt $H$ ins Spiel.
+
+**Ordinalskala**
+
+- Rangordnung
+- Unterscheidung zusätzlich eine "Größer-Kleiner"-Relation ($A > B$)
+- Beispiele: Tabellenplätze beim Sport, Schulnoten, Windstärken, höchste Bildungsabschlüsse
+- Wichtig: Die Abstände zwischen den Rängen sind nicht interpretierbar (der Abstand zwischen Platz 1 und 2 ist nicht zwingend derselbe wie zwischen Platz 2 und 3)
+- Zentrale Tendenz: Der Median ist hier das Maß der Wahl
+
+**Intervallskala**
+
+- gleiche Abstände: Abstände/Intervalle zwischen den Werten gleich groß
+  und interpretierbar
+- Beispiele: Temperatur in Grad Celsius, IQ-Werte, Kalenderjahre
+- Besonderheit: Es gibt keinen natürlichen Nullpunkt. (0°C bedeutet nicht "keine Temperatur")
+- Zentrale Tendenz: arithmetisches Mittel (Durchschnitt)
+
+**Ratio-/Verhältnisskala**
+
+- zusätzlich natürlicher Nullpunkt
+- Beispiele: Einkommen, Alter in Jahren, Reaktionszeit in ms, Gewicht
+- Vorteil: Verhältnisbildung "A ist doppelt so alt wie B" (Aber 20°C ist
+  nicht doppelt so warm wie 10°C)
+- Einheit willkürlich festgelegt, ob zB in Gramm oder Pfund gemessen
+  unerheblich
+
+**Absolutskala**
+
+- auch Maßeinheit natürlich vorgegeben und unveränderlich
+- zumeist Häufigkeiten/Anzahl
+- Beispiele: Anzahl der Kinder in einer Familie, Anzahl der Fehler in einem Test, Anzahl der Studierenden im Modul M2.
+
+###### Äquivalenzrelation
+Eine Relation R $\circ$ heißt Äquivalenzrelation, wenn sie 
+folgende drei Anforderungen erfüllt:
+
+(1) R ist reflexiv, d.h., für alle u $\in$ U gilt: u $\circx$ u. 
+(2) R ist symmetrisch, d.h., für alle u, v$\in$ U gilt: 
+u $\circ$ v → v $\circ$ u.
+(3) R ist transitiv, d.h., für alle u, v, w $\in$ U gilt: 
+(u $\circ$ v & v$\circ$w) → u$\circ$w.\
+Für die Äquivalenzrelation verwenden wir das Zeichen ≈.
+
+
+
+**Merkmals-xx**
+
+- **Merkmalsträger:** Das Objekt, das untersucht wird (z. B. ein Student).
+- **Merkmal:** Die interessierende Eigenschaft (z. B. die Körpergröße)
+- **Merkmalsausprägung:** Der konkrete Wert, den dieser spezielle Merkmalsträger hat (z. B. 1,80 m)
+
+
+
+
+
 # Deskriptive Statistik
-**Arithmetisches Mittel**  
-arithm. Mittel = $\sum \frac{Alle\, Werte}{Anzahl\, Werte}$  
+
+**Arithmetisches Mittel**\
+arithm. Mittel = $\sum \frac{Alle\, Werte}{Anzahl\, Werte}$\
 in R: _mean_
 ```{r}
 noten <- c(1.3, 2.0, 1.7, 3.3, 2.3)
 mean(noten)
 ```
 
-**Median**  
-mittlerer Wert; 50% der Werte sind größer und 50% der Werte sind kleiner  
+**Median**\
+mittlerer Wert; 50% der Werte sind größer und 50% der Werte sind kleiner\
 in R: _median_
 ```{r}
 noten <- c(1.3, 2.0, 1.7, 3.3, 2.3)
 median(noten)
 ```
 
-**Modalwert**  
+**Modalwert**\
 der am häufigsten vorkommende Wert
 
-**Geometrisches Mittel**  
+**Geometrisches Mittel**\
 n-te Wurzel aus dem Produkt der n Werte\
 stets kleiner als da arithmetische Mittel\
-geom. Mittel = $\sqrt[n]{\prod_{i_1}^{n}x_i}$  
+geom. Mittel = $\sqrt[n]{\prod_{i_1}^{n}x_i}$
 ```{r}
 gm <- function(x){
   return( prod(x)^(1/length(x)) )
@@ -35,19 +117,19 @@ gm(daten) # Ergibt 4 [7]
 ``` 
 
 
-**Quartil**  
+**Quartil**\
 teilt Datenreihe in vier gleich große Bereiche\
 25% der Daten liegen unter Q1 - unteres Quartil\
 Q2 - zweites Quantil entspricht dem Median\
-75% der Daten liegen unter Q3 - oberes Quartil  
+75% der Daten liegen unter Q3 - oberes Quartil\
 in R: _quantile_
 ```{r}
 daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
 quantile(daten)
 ```
 
-**Interquartilsabstand**  
-(=Q3-Q1) Abstand der mittleren 50% der Daten  
+**Interquartilsabstand**\ 
+(=Q3-Q1) Abstand der mittleren 50% der Daten\ 
 in R: _IQR_
 ```{r}
 daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
@@ -60,36 +142,36 @@ daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
 summary(daten)
 ```
 
-**Quantil**  
+**Quantil**\ 
 Verallgemeinerung Quartil\
 p-Quartil: links sind p der Werte, rechts 1-p\
-Q3 entspricht damit p = 75%  
+Q3 entspricht damit p = 75%\
 in R: _quantile(x, probs)_
 ```{r}
 daten <- c(3, 7, 12, 18, 25, 30, 45, 50, 60, 80, 100)
 quantile(daten, probs = c(0.3, 0.6, 0.9))
 ```
 
-**Vektor**  
+**Vektor**\
 Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammengefügt
 ```{r}
 vektor <- c(1,2,3,4,5)
 ```
 
-**Zufallszahlen**  
+**Zufallszahlen**\ 
 Für Vektoren bestehend aus Zufallszahlen kann die Funktion rnorm(Anzahl Zahlen, arith. Mittel, Standardabweichung) verwendet werden, die Zahlen aus der Normalverteilung angibt
 ```{r}
 zufall <- rnorm(20, 0, 17)
 summary(zufall)
 zufall
 ```
-**Histogramm**  
+**Histogramm**\
 graphische Darstellung der Häufigkeitsverteilung
 ```{r}
 hist(zufall)
 ```
 
-**Boxplot**  
+**Boxplot**\ 
 Dartellung der Verteilung\
 Darstellung der Medians, der Quartile Q1 und Q3, Whiskern und Ausreißern\
 Whisker sind der letzte Wert, der sich max. das 1,5-fache des IQR von Q1 bzw. Q3 befindet\
