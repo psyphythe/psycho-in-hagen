@@ -194,6 +194,7 @@ gesamte Fläche Dichtefunktion == 1 = 100%\
 Bsp. Dichtefunktion
 
 ```{r}
+#| echo: false
 #| message: false
 #| warning: false
 library(ggplot2)
@@ -207,6 +208,8 @@ df <- data.frame(
 
 # Plot erstellen
 ggplot(df, aes(x = x, y = y)) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.5) +
+  geom_vline(xintercept = 0, color = "black", linewidth = 0.5) +
   # Die blaue Linie der Dichtefunktion
   geom_line(color = "blue", size = 1) +
   # Die Fläche unter der Kurve (nur zwischen 0 und 6)
@@ -219,9 +222,18 @@ ggplot(df, aes(x = x, y = y)) +
   coord_cartesian(ylim = c(-0.02, 0.25)) +
   labs(title = expression(paste("Dichtefunktion ", f(x) == 1/6, " für ", 0 <= x, " " <= 6)),
        x = "x",
-       y = "f(x)") +
-  theme_minimal()
+       y = "f(x)")
 ```
+
+
+$$
+f(x) = 
+\begin{cases} 
+0 & \text{für } x < 0 \\
+\frac{1}{6} & \text{für } 0 \leq x \leq 6 \\
+0 & \text{für } x > 6
+\end{cases}
+$$
 
 #### Verteilungen
 
