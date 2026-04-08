@@ -226,7 +226,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">18.03.2026</p>
+      <p class="date">08.04.2026</p>
     </div>
   </div>
   
@@ -294,7 +294,7 @@ window.Quarto = {
 <ol type="1">
 <li>R ist reflexiv, d.h., für alle u <span class="math inline">\(\in\)</span> U gilt: u <span class="math inline">\(\circ\)</span> u.</li>
 <li>R ist symmetrisch, d.h., für alle u, v<span class="math inline">\(\in\)</span> U gilt: u <span class="math inline">\(\circ\)</span> v → v <span class="math inline">\(\circ\)</span> u.</li>
-<li>R ist transitiv, d.h., für alle u, v, w <span class="math inline">\(\in\)</span> U gilt: (u <span class="math inline">\(\circ\)</span> v &amp; v<span class="math inline">\(\circ\)</span>w) → u<span class="math inline">\(\circ\)</span>w.<br>
+<li>R ist transitiv, d.h., für alle u, v, w <span class="math inline">\(\in\)</span> U gilt: (u <span class="math inline">\(\circ\)</span> v &amp; v <span class="math inline">\(\circ\)</span> w) → u <span class="math inline">\(\circ\)</span> w.<br>
 Für die Äquivalenzrelation verwenden wir das Zeichen ≈.</li>
 </ol>
 <p><strong>Merkmals-xx</strong></p>
@@ -424,18 +424,18 @@ Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammeng
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(zufall)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
--39.8523 -12.9941   0.7856   2.2117  15.8710  34.8551 </code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-25.612  -6.543  -1.463  -1.197   5.151  23.543 </code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zufall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  34.855119  19.749675  28.214741 -39.852290   9.643346 -13.071432
- [7] -16.824414  -2.274229   8.901255 -24.674706   3.845484  -8.809507
-[13]  25.159324  14.578166 -12.968378  -5.636343 -15.645554  -2.645155
-[19]   9.344978  32.343795</code></pre>
+<pre><code> [1]   9.3455006 -25.6120203  -5.8878384  -9.0855395  16.5518789  10.2750621
+ [7]  -0.3313140  -2.7074972  -2.9737307  -8.5085319  -1.2033874  -4.8419002
+[13] -17.9097794   4.3214579  23.5425890  -1.1900601 -14.0341757   7.6376427
+[19]  -1.7226031   0.4030482</code></pre>
 </div>
 </div>
 <p><strong>Histogramm</strong><br>
@@ -471,8 +471,71 @@ Ausreißer weiter entfernt, durch Kreis gekennzeichnet</p>
 </div>
 </div>
 </div>
+<p><strong>Zufallsvariablen</strong></p>
+<ul>
+<li><p>diskret: nur einzele abgegrenzte Werte möglich, zB 1,2,..,6 für die Augen auf einen Würfel</p></li>
+<li><p>stetig: unendlich viele Zwischenwerte</p></li>
+</ul>
+<p>bei diskreten Variablen -&gt; Wahrscheinlichkeitsfunktion<br>
+</p>
+<p>bei stetigen Variablen -&gt; Dichtefunktion, Höhe des Graphen gibt Wahrscheinlichkeitsdichte an<br>
+</p>
+<p>Wahrscheinlichkeit für einzelnen exakten Punkt bei stetigen Variable gleich Null, sinnvolle Aussagen nur über Intervalle, Wahrscheinlichkeit entspricht Fläche unter Graphen (Berechnung durch Integral)<br>
+</p>
+<p>gesamte Fläche Dichtefunktion == 1 = 100%<br>
+</p>
+<p>Bsp. Dichtefunktion</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>R-Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten für die Linien definieren</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Wir erstellen Punkte für die Sprünge bei 0 und 6</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot erstellen</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Die blaue Linie der Dichtefunktion</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Die Fläche unter der Kurve (nur zwischen 0 und 6)</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, x <span class="sc">&gt;=</span> <span class="dv">0</span> <span class="sc">&amp;</span> x <span class="sc">&lt;=</span> <span class="dv">6</span>), </span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> y), </span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Styling</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"1/6"</span>)) <span class="sc">+</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.02</span>, <span class="fl">0.25</span>)) <span class="sc">+</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Dichtefunktion "</span>, <span class="fu">f</span>(x) <span class="sc">==</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="st">" für "</span>, <span class="dv">0</span> <span class="sc">&lt;=</span> x, <span class="st">" "</span> <span class="sc">&lt;=</span> <span class="dv">6</span>)),</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"x"</span>,</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"f(x)"</span>) <span class="sc">+</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="m2_home_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="1050"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="verteilungen" class="level4">
+<h4 class="anchored" data-anchor-id="verteilungen">Verteilungen</h4>
+<ul>
+<li>Gleichverteilung/Rechteckverteilung: gleiche Breiter der Intervalle = gleiche Wahrscheinlichkeit</li>
+<li>Normalverteilung: Gauß’sche Glockenkurve</li>
+</ul>
+</section>
+<section id="erwartungswert" class="level4">
+<h4 class="anchored" data-anchor-id="erwartungswert">Erwartungswert</h4>
+<p>y = f(x)</p>
+<p><span class="math inline">\(E(x) = \int x \times f(x) \, dx\)</span></p>
 
 
+</section>
 </section>
 
 <div class="content-block" style="padding-top: 20px;">
