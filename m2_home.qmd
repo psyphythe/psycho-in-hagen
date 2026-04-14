@@ -191,7 +191,7 @@ Wahrscheinlichkeit für einzelnen exakten Punkt bei stetigen Variable gleich Nul
 
 gesamte Fläche Dichtefunktion == 1 = 100%\
 
-Bsp. Dichtefunktion
+Bsp.
 
 ```{r}
 #| echo: false
@@ -225,7 +225,6 @@ ggplot(df, aes(x = x, y = y)) +
        y = "f(x)")
 ```
 
-
 $$
 f(x) = 
 \begin{cases} 
@@ -234,6 +233,54 @@ f(x) =
 0 & \text{für } x > 6
 \end{cases}
 $$
+
+### Klassische Wahrscheinlichkeit
+
+$$P(A) = \frac{\text{Anzahl der günstigen Fälle}}{\text{Anzahl der möglichen Fälle}}$$
+
+### Konjunktionen Zwei Ereignisse gleichzeitig
+
+Wahrscheinlichkeit für beide Ergebnisse zusammen immer kleiner/gleich Wahrscheinlichkeit eines Einzerergebnises
+
+### Bedingte Wahrscheinlichkeiten
+
+$$P(A|B) = \frac{P(A \wedge B)}{P(B)}$$ Wahrscheinlichkeit für A, wenn bereits B gilt: Wahrscheinlichkeit für A *und* B geteilt durch Wahrscheinlichkeit von B
+
+Beispiel
+
+-   $P(\text{promoviert} | \text{Hausfrau})$: Wahrscheinlichkeit, dass eine Hausfrau einen Doktortitel hat.
+-   $P(\text{Hausfrau} | \text{promoviert})$: Wahrscheinlichkeit, dass eine Frau mit Doktortitel Hausfrau ist.
+
+Schnittmenge gleich, Wahrscheinlichkeit total unterschiedlich, weil Basis unterschiedlich
+
+### Unabhängige Ereignisse
+
+beeinflussen sich nicht, daher gilt hier Produktregel
+
+$$P(A \wedge B) = P(A) \cdot P(B)$$
+
+### Binominal-Verteilung
+
+Bernoulli-Experimente: es gibt jeweils nur zwei mögliche Ergebnisse, zb wahr/falsch, Kopf/Zahl, gesund/krank\
+Wahrscheinlichkeit für Erfolg = p\
+$$P(A_{k}) = \binom{n}{k} p^{k} (1-p)^{n-k}$$
+
+Beispiel:\
+30% depressiv, Stichprobenanzahl 20, Wahrscheinlichkeit für 5 Erkrankte? $$\binom{20}{5} \cdot 0,3^5 \cdot 0,7^{15} \approx \mathbf{0,179}$$
+
+Stichprobengröße n, Erfolgswahrscheinlichkeit p\
+-\> Erwartungswert $E = n \cdot p$\
+Im Beispiel $E = 20 \cdot 0,3 = 6$\
+Erwartungswert entspricht *Populationsmittelwert* $\mu$.
+
+### Standardfehler
+Standardabweichung Stichprobenverteilung Binominalverteilung\
+Standardfehler für *Anteil*
+$$\sigma_{Anteil} = \sqrt{\frac{p(1-p)}{n}}$$
+
+Standardfehler für *Mittelwert*
+$$\hat{\sigma}_{\bar{x}} = \frac{\hat{\sigma}}{\sqrt{n}}$$
+$\hat{\sigma}$ ist der Standardfehler der Population, $\hat{\sigma}_x$ der Stichprobe
 
 #### Verteilungen
 

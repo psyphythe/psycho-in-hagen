@@ -206,7 +206,15 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#skalenniveaus" id="toc-skalenniveaus" class="nav-link" data-scroll-target="#skalenniveaus">Skalenniveaus</a></li>
   </ul></li>
-  <li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik">Deskriptive Statistik</a></li>
+  <li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik">Deskriptive Statistik</a>
+  <ul class="collapse">
+  <li><a href="#klassische-wahrscheinlichkeit" id="toc-klassische-wahrscheinlichkeit" class="nav-link" data-scroll-target="#klassische-wahrscheinlichkeit">Klassische Wahrscheinlichkeit</a></li>
+  <li><a href="#konjunktionen-zwei-ereignisse-gleichzeitig" id="toc-konjunktionen-zwei-ereignisse-gleichzeitig" class="nav-link" data-scroll-target="#konjunktionen-zwei-ereignisse-gleichzeitig">Konjunktionen Zwei Ereignisse gleichzeitig</a></li>
+  <li><a href="#bedingte-wahrscheinlichkeiten" id="toc-bedingte-wahrscheinlichkeiten" class="nav-link" data-scroll-target="#bedingte-wahrscheinlichkeiten">Bedingte Wahrscheinlichkeiten</a></li>
+  <li><a href="#unabhängige-ereignisse" id="toc-unabhängige-ereignisse" class="nav-link" data-scroll-target="#unabhängige-ereignisse">Unabhängige Ereignisse</a></li>
+  <li><a href="#binominal-verteilung" id="toc-binominal-verteilung" class="nav-link" data-scroll-target="#binominal-verteilung">Binominal-Verteilung</a></li>
+  <li><a href="#standardfehler" id="toc-standardfehler" class="nav-link" data-scroll-target="#standardfehler">Standardfehler</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -226,7 +234,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">08.04.2026</p>
+      <p class="date">15.04.2026</p>
     </div>
   </div>
   
@@ -425,17 +433,17 @@ Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammeng
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
--38.053  -7.674  -2.694   2.561   8.729  51.302 </code></pre>
+-43.694  -9.399  -3.377  -3.351   9.466  30.915 </code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zufall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]   8.336464  -3.286558 -10.701521  10.284456   7.053388   2.028255
- [7]  51.301931 -11.961077 -38.052606   9.906878  -7.479196  -7.616508
-[13]  37.878079  -7.027693  -5.418965  30.252255  -2.102306  -7.845252
-[19] -11.345110   7.009022</code></pre>
+<pre><code> [1]   3.1273889 -31.9860127  -8.0129380  30.9151477   8.3909662  -3.0560338
+ [7]  -7.1803176  -7.1794519  12.6891457  -6.9439816 -14.2536513  18.1706540
+[13] -43.6944823  -3.0845987  16.7745859  21.8856237  -0.2991016  -3.6684386
+[19] -36.0647270 -13.5553694</code></pre>
 </div>
 </div>
 <p><strong>Histogramm</strong><br>
@@ -484,7 +492,7 @@ Ausreißer weiter entfernt, durch Kreis gekennzeichnet</p>
 </p>
 <p>gesamte Fläche Dichtefunktion == 1 = 100%<br>
 </p>
-<p>Bsp. Dichtefunktion</p>
+<p>Bsp.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -502,6 +510,46 @@ f(x) =
 0 &amp; \text{für } x &gt; 6
 \end{cases}
 \]</span></p>
+<section id="klassische-wahrscheinlichkeit" class="level3">
+<h3 class="anchored" data-anchor-id="klassische-wahrscheinlichkeit">Klassische Wahrscheinlichkeit</h3>
+<p><span class="math display">\[P(A) = \frac{\text{Anzahl der günstigen Fälle}}{\text{Anzahl der möglichen Fälle}}\]</span></p>
+</section>
+<section id="konjunktionen-zwei-ereignisse-gleichzeitig" class="level3">
+<h3 class="anchored" data-anchor-id="konjunktionen-zwei-ereignisse-gleichzeitig">Konjunktionen Zwei Ereignisse gleichzeitig</h3>
+<p>Wahrscheinlichkeit für beide Ergebnisse zusammen immer kleiner/gleich Wahrscheinlichkeit eines Einzerergebnises</p>
+</section>
+<section id="bedingte-wahrscheinlichkeiten" class="level3">
+<h3 class="anchored" data-anchor-id="bedingte-wahrscheinlichkeiten">Bedingte Wahrscheinlichkeiten</h3>
+<p><span class="math display">\[P(A|B) = \frac{P(A \wedge B)}{P(B)}\]</span> Wahrscheinlichkeit für A, wenn bereits B gilt: Wahrscheinlichkeit für A <em>und</em> B geteilt durch Wahrscheinlichkeit von B</p>
+<p>Beispiel</p>
+<ul>
+<li><span class="math inline">\(P(\text{promoviert} | \text{Hausfrau})\)</span>: Wahrscheinlichkeit, dass eine Hausfrau einen Doktortitel hat.</li>
+<li><span class="math inline">\(P(\text{Hausfrau} | \text{promoviert})\)</span>: Wahrscheinlichkeit, dass eine Frau mit Doktortitel Hausfrau ist.</li>
+</ul>
+<p>Schnittmenge gleich, Wahrscheinlichkeit total unterschiedlich, weil Basis unterschiedlich</p>
+</section>
+<section id="unabhängige-ereignisse" class="level3">
+<h3 class="anchored" data-anchor-id="unabhängige-ereignisse">Unabhängige Ereignisse</h3>
+<p>beeinflussen sich nicht, daher gilt hier Produktregel</p>
+<p><span class="math display">\[P(A \wedge B) = P(A) \cdot P(B)\]</span></p>
+</section>
+<section id="binominal-verteilung" class="level3">
+<h3 class="anchored" data-anchor-id="binominal-verteilung">Binominal-Verteilung</h3>
+<p>Bernoulli-Experimente: es gibt jeweils nur zwei mögliche Ergebnisse, zb wahr/falsch, Kopf/Zahl, gesund/krank<br>
+Wahrscheinlichkeit für Erfolg = p<br>
+<span class="math display">\[P(A_{k}) = \binom{n}{k} p^{k} (1-p)^{n-k}\]</span></p>
+<p>Beispiel:<br>
+30% depressiv, Stichprobenanzahl 20, Wahrscheinlichkeit für 5 Erkrankte? <span class="math display">\[\binom{20}{5} \cdot 0,3^5 \cdot 0,7^{15} \approx \mathbf{0,179}\]</span></p>
+<p>Stichprobengröße n, Erfolgswahrscheinlichkeit p<br>
+-&gt; Erwartungswert <span class="math inline">\(E = n \cdot p\)</span><br>
+Im Beispiel <span class="math inline">\(E = 20 \cdot 0,3 = 6\)</span><br>
+Erwartungswert entspricht <em>Populationsmittelwert</em> <span class="math inline">\(\mu\)</span>.</p>
+</section>
+<section id="standardfehler" class="level3">
+<h3 class="anchored" data-anchor-id="standardfehler">Standardfehler</h3>
+<p>Standardabweichung Stichprobenverteilung Binominalverteilung<br>
+Standardfehler für <em>Anteil</em> <span class="math display">\[\sigma_{Anteil} = \sqrt{\frac{p(1-p)}{n}}\]</span></p>
+<p>Standardfehler für <em>Mittelwert</em> <span class="math display">\[\hat{\sigma}_{\bar{x}} = \frac{\hat{\sigma}}{\sqrt{n}}\]</span> <span class="math inline">\(\hat{\sigma}\)</span> ist der Standardfehler der Population, <span class="math inline">\(\hat{\sigma}_x\)</span> der Stichprobe</p>
 <section id="verteilungen" class="level4">
 <h4 class="anchored" data-anchor-id="verteilungen">Verteilungen</h4>
 <ul>
@@ -515,6 +563,7 @@ f(x) =
 <p><span class="math inline">\(E(x) = \int x \times f(x) \, dx\)</span></p>
 
 
+</section>
 </section>
 </section>
 
