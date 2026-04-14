@@ -273,7 +273,7 @@ Stichprobengröße n, Erfolgswahrscheinlichkeit p\
 Im Beispiel $E = 20 \cdot 0,3 = 6$\
 Erwartungswert entspricht *Populationsmittelwert* $\mu$.
 
-##### Standardfehler
+###### Standardfehler
 
 Standardabweichung Stichprobenverteilung Binominalverteilung\
 Standardfehler für *Anteil* $$\sigma_{Anteil} = \sqrt{\frac{p(1-p)}{n}}$$
@@ -284,7 +284,7 @@ Schätzung Populationsvarianz $$\hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x
 
 $n-1$ anstelle von $n$, da echte Varianz in kleiner Stichprobe sonst unterschätzt
 
-##### Verteilungen
+###### Verteilungen
 - wenn $n\cdot p(1-9) > 9$ Formel für Normalverteilung statt Binominalverteiung nutzbar
 
 -   Gleichverteilung/Rechteckverteilung: gleiche Breiter der Intervalle = gleiche Wahrscheinlichkeit

@@ -425,17 +425,17 @@ Menge von Objekten in R, durch Pfeil definiert, mit Funktion c=combine zusammeng
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
--46.886 -16.959  -5.509  -3.583   9.820  25.824 </code></pre>
+-23.407  -6.893   1.895   1.391   8.361  31.557 </code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>R-Code anzeigen</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zufall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]   9.179173  -4.400853 -33.560784  -6.617933   8.129160  -6.886447
- [7]  24.573263  25.824357   7.824911 -24.652288  19.851547 -46.885889
-[13]   5.267410 -14.623375  25.078119  -8.110058 -23.964945 -10.595014
-[19]  11.741128 -28.830585</code></pre>
+<pre><code> [1] -15.0856694  -2.1054824   2.7570654  12.2226455  -1.9215605   0.1652329
+ [7] -18.2207861 -23.4065609  31.5574347   7.0742834   5.5807002   1.5873824
+[13] -19.6021596  -4.1615522  16.7830814 -17.4069212   6.3524526  25.7162454
+[19]   2.2021634  17.7405122</code></pre>
 </div>
 </div>
 <p><strong>Histogramm</strong><br>
@@ -536,9 +536,8 @@ Wahrscheinlichkeit für Erfolg = p<br>
 -&gt; Erwartungswert <span class="math inline">\(E = n \cdot p\)</span><br>
 Im Beispiel <span class="math inline">\(E = 20 \cdot 0,3 = 6\)</span><br>
 Erwartungswert entspricht <em>Populationsmittelwert</em> <span class="math inline">\(\mu\)</span>.</p>
-</section>
-<section id="standardfehler" class="level5">
-<h5 class="anchored" data-anchor-id="standardfehler">Standardfehler</h5>
+<section id="standardfehler" class="level6">
+<h6 class="anchored" data-anchor-id="standardfehler">Standardfehler</h6>
 <p>Standardabweichung Stichprobenverteilung Binominalverteilung<br>
 Standardfehler für <em>Anteil</em> <span class="math display">\[\sigma_{Anteil} = \sqrt{\frac{p(1-p)}{n}}\]</span></p>
 <p>Standardfehler für <em>Mittelwert</em> <span class="math display">\[\hat{\sigma}_{\bar{x}} = \frac{\hat{\sigma}}{\sqrt{n}}\]</span> <span class="math inline">\(\hat{\sigma}\)</span> ist der Standardfehler der Population, <span class="math inline">\(\hat{\sigma}_x\)</span> der Stichprobe<br>
@@ -546,8 +545,8 @@ Standardfehler für <em>Anteil</em> <span class="math display">\[\sigma_{Anteil}
 Schätzung Populationsvarianz <span class="math display">\[\hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2\]</span></p>
 <p><span class="math inline">\(n-1\)</span> anstelle von <span class="math inline">\(n\)</span>, da echte Varianz in kleiner Stichprobe sonst unterschätzt</p>
 </section>
-<section id="verteilungen" class="level5">
-<h5 class="anchored" data-anchor-id="verteilungen">Verteilungen</h5>
+<section id="verteilungen" class="level6">
+<h6 class="anchored" data-anchor-id="verteilungen">Verteilungen</h6>
 <ul>
 <li><p>wenn <span class="math inline">\(n\cdot p(1-9) &gt; 9\)</span> Formel für Normalverteilung statt Binominalverteiung nutzbar</p></li>
 <li><p>Gleichverteilung/Rechteckverteilung: gleiche Breiter der Intervalle = gleiche Wahrscheinlichkeit</p></li>
@@ -562,6 +561,7 @@ Schätzung Populationsvarianz <span class="math display">\[\hat{\sigma}^2 = \fra
 </ul>
 
 
+</section>
 </section>
 </section>
 
