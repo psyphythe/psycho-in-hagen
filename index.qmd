@@ -1,10 +1,11 @@
 ---
 title: "Psycho in Hagen - Mitschriften"
+date: today
 listing:
   contents: 
     - "m2_home.qmd"
     - "m4_home.qmd"
     - "m6a_home.qmd" 
   type: grid
-  fields: [image]
+  fields: [image] 
 ---
