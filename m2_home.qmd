@@ -234,15 +234,15 @@ f(x) =
 \end{cases}
 $$
 
-### Klassische Wahrscheinlichkeit
+##### Klassische Wahrscheinlichkeit
 
 $$P(A) = \frac{\text{Anzahl der günstigen Fälle}}{\text{Anzahl der möglichen Fälle}}$$
 
-### Konjunktionen Zwei Ereignisse gleichzeitig
+##### Konjunktionen Zwei Ereignisse gleichzeitig
 
 Wahrscheinlichkeit für beide Ergebnisse zusammen immer kleiner/gleich Wahrscheinlichkeit eines Einzerergebnises
 
-### Bedingte Wahrscheinlichkeiten
+##### Bedingte Wahrscheinlichkeiten
 
 $$P(A|B) = \frac{P(A \wedge B)}{P(B)}$$ Wahrscheinlichkeit für A, wenn bereits B gilt: Wahrscheinlichkeit für A *und* B geteilt durch Wahrscheinlichkeit von B
 
@@ -253,13 +253,13 @@ Beispiel
 
 Schnittmenge gleich, Wahrscheinlichkeit total unterschiedlich, weil Basis unterschiedlich
 
-### Unabhängige Ereignisse
+##### Unabhängige Ereignisse
 
 beeinflussen sich nicht, daher gilt hier Produktregel
 
 $$P(A \wedge B) = P(A) \cdot P(B)$$
 
-### Binominal-Verteilung
+##### Binominal-Verteilung
 
 Bernoulli-Experimente: es gibt jeweils nur zwei mögliche Ergebnisse, zb wahr/falsch, Kopf/Zahl, gesund/krank\
 Wahrscheinlichkeit für Erfolg = p\
@@ -273,22 +273,27 @@ Stichprobengröße n, Erfolgswahrscheinlichkeit p\
 Im Beispiel $E = 20 \cdot 0,3 = 6$\
 Erwartungswert entspricht *Populationsmittelwert* $\mu$.
 
-### Standardfehler
+##### Standardfehler
+
 Standardabweichung Stichprobenverteilung Binominalverteilung\
-Standardfehler für *Anteil*
-$$\sigma_{Anteil} = \sqrt{\frac{p(1-p)}{n}}$$
+Standardfehler für *Anteil* $$\sigma_{Anteil} = \sqrt{\frac{p(1-p)}{n}}$$
 
-Standardfehler für *Mittelwert*
-$$\hat{\sigma}_{\bar{x}} = \frac{\hat{\sigma}}{\sqrt{n}}$$
-$\hat{\sigma}$ ist der Standardfehler der Population, $\hat{\sigma}_x$ der Stichprobe
+Standardfehler für *Mittelwert* $$\hat{\sigma}_{\bar{x}} = \frac{\hat{\sigma}}{\sqrt{n}}$$ $\hat{\sigma}$ ist der Standardfehler der Population, $\hat{\sigma}_x$ der Stichprobe\
+\
+Schätzung Populationsvarianz $$\hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2$$
 
-#### Verteilungen
+$n-1$ anstelle von $n$, da echte Varianz in kleiner Stichprobe sonst unterschätzt
+
+##### Verteilungen
+- wenn $n\cdot p(1-9) > 9$ Formel für Normalverteilung statt Binominalverteiung nutzbar
 
 -   Gleichverteilung/Rechteckverteilung: gleiche Breiter der Intervalle = gleiche Wahrscheinlichkeit
 -   Normalverteilung: Gauß'sche Glockenkurve
 
-#### Erwartungswert
+- z-Standardnormalverteilung: Mittelwert = 0, Standardabweichung = 1
 
-y = f(x)
+- Normalverteilung
+  - 68% innerhalb $\pm$ 1 Standardabweichungen vom Mittelwert
+  - 95% innerhalb$\pm$ 2 Standardabweichungen vom Mittelwert
+  - 99% innerhalb $\pm$ 3 Standardabweichungen vom Mittelwert
 
-$E(x) = \int x \times f(x) \, dx$
